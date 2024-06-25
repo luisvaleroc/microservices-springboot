@@ -5,13 +5,9 @@ server:
   servlet:
     context-path: /companies-crud-fallback
   port: 8787
-
 eureka:
   instance:
     instance-id: "${spring.application.name}:${random.value}"
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-
-
+      defaultZone: ${EUREKA_URL}
